@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Manicure a domicilio en Bogotá. Servicios profesionales de manicure, pedicure, semipermanente y spa de manos y pies en la comodidad de tu hogar.">
+  <meta name="theme-color" content="#d4655c">
+  <meta name="format-detection" content="telephone=yes">
+  <!-- Compatibilidad móvil -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Manicure a Domicilio Bogotá | Belleza en tu hogar</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Tipografías elegantes y llamativas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Parisienne&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========== NAVEGACIÓN ========== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#inicio" class="nav__logo">Manicure<span>Bogotá</span></a>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#inicio" class="nav__link">Inicio</a></li>
+        <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+        <li><a href="#servicios" class="nav__link">Servicios</a></li>
+        <li><a href="#esterilizacion" class="nav__link">Higiene</a></li>
+        <li><a href="#galeria" class="nav__link">Galería</a></li>
+        <li><a href="#caballero" class="nav__link">Caballero</a></li>
+        <li><a href="#testimonios" class="nav__link">Testimonios</a></li>
+        <li><a href="#contacto" class="nav__link nav__link--cta">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="inicio">
+      <div class="hero__bg"></div>
+      <div class="hero__content container">
+        <div class="hero__text reveal">
+          <p class="hero__badge">Servicio profesional a domicilio</p>
+          <h1 class="hero__title"><em>Manicure</em><br>a Domicilio Bogotá</h1>
+          <p class="hero__subtitle">Llevamos belleza y cuidado hasta la comodidad de tu hogar.</p>
+          <a href="https://wa.me/573143890546?text=Hola%2C%20quiero%20agendar%20una%20cita%20de%20manicure" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+            Agenda tu cita
+          </a>
+        </div>
+        <div class="hero__image reveal reveal--delay">
+          <div class="hero__image-frame">
+            <img
+              src="imagenes/WhatsApp%20Image%202026-06-23%20at%206.11.09%20PM.jpeg"
+              alt="Manicure francesa con flores rosadas y detalles dorados"
+              loading="eager"
+            >
+          </div>
+          <div class="hero__decor"></div>
+        </div>
+      </div>
+      <a href="#sobre-mi" class="hero__scroll" aria-label="Desplazarse hacia abajo">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ========== SOBRE MÍ ========== -->
+    <section class="about section" id="sobre-mi">
+      <div class="container about__grid">
+        <div class="about__image reveal">
+          <div class="about__image-wrapper">
+            <img
+              src="imagenes/WhatsApp%20Image%202026-05-27%20at%2011.42.43%20PM.jpeg"
+              alt="Diseño de uñas con flores rosadas, dorado y detalles artísticos"
+              loading="lazy"
+            >
+          </div>
+          <div class="about__accent"></div>
+        </div>
+        <div class="about__content reveal reveal--delay">
+          <span class="section__tag">Conóceme</span>
+          <h2 class="section__title">Sobre mí</h2>
+          <p class="about__text">
+            Soy manicurista profesional con pasión por el cuidado de tus manos y pies.
+            Mi compromiso es brindarte una experiencia de belleza única, cómoda y personalizada
+            directamente en tu hogar en Bogotá.
+          </p>
+          <p class="about__text">
+            Cada cita es un momento especial: utilizo productos de calidad, técnicas actualizadas
+            y un trato cálido para que te sientas mimada, relajada y con uñas impecables.
+            Tu bienestar y satisfacción son mi prioridad.
+          </p>
+          <ul class="about__features">
+            <li>
+              <span class="about__icon">✦</span>
+              Atención personalizada a domicilio
+            </li>
+            <li>
+              <span class="about__icon">✦</span>
+              Productos profesionales de calidad
+            </li>
+            <li>
+              <span class="about__icon">✦</span>
+              Diseños creativos y tendencias actuales
+            </li>
+          </ul>
+          <a href="https://wa.me/573143890546?text=Hola%2C%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20tus%20servicios" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">
+            Escríbeme
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SERVICIOS ========== -->
+    <section class="services section" id="servicios">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Lo que ofrezco</span>
+          <h2 class="section__title">Servicios</h2>
+          <p class="section__desc">Cuidado integral para tus manos y pies, con la comodidad de recibirlo en casa.</p>
+        </div>
+        <div class="services__grid">
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M8 6h8M6 10c0 4 2 8 6 12 4-4 6-8 6-12H6z"/></svg>
+            </div>
+            <h3>Manicure</h3>
+            <p>Limpieza, forma, cutículas y esmaltado para unas manos impecables y cuidadas.</p>
+          </article>
+          <article class="service-card reveal reveal--delay">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="18" rx="6" ry="4"/><path d="M8 14V8a4 4 0 018 0v6"/></svg>
+            </div>
+            <h3>Pedicure</h3>
+            <p>Tratamiento completo para tus pies: exfoliación, hidratación y acabado perfecto.</p>
+          </article>
+          <article class="service-card reveal reveal--delay-2">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2 2"/></svg>
+            </div>
+            <h3>Semipermanente</h3>
+            <p>Esmaltado de larga duración con acabado brillante y resistencia por semanas.</p>
+          </article>
+          <article class="service-card reveal reveal--delay">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h16M12 4l4 8-4 8-4-8 4-8z"/></svg>
+            </div>
+            <h3>Diseño de uñas</h3>
+            <p>Arte personalizado: flores, geométricos, francesa y las tendencias que más te gusten.</p>
+          </article>
+          <article class="service-card reveal reveal--delay-2">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12c0-2 2-4 4-4s4 2 4 4-2 4-4 4-4-2-4-4z"/><path d="M4 20c2-4 6-6 8-6s6 2 8 6"/></svg>
+            </div>
+            <h3>Spa de manos y pies</h3>
+            <p>Experiencia relajante con exfoliación, mascarillas e hidratación profunda.</p>
+          </article>
+          <article class="service-card reveal reveal--delay-3">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h4l2-4 4 8 2-4h6"/><circle cx="18" cy="6" r="2"/></svg>
+            </div>
+            <h3>Atención a domicilio</h3>
+            <p>Llego a tu hogar en Bogotá con todo lo necesario para tu comodidad y tranquilidad.</p>
+          </article>
+          <article class="service-card service-card--featured reveal">
+            <span class="service-card__badge">Nuevo</span>
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a4 4 0 014 4v3a4 4 0 11-8 0V6a4 4 0 014-4z"/><path d="M5 22c0-4 3-7 7-7s7 3 7 7"/></svg>
+            </div>
+            <h3>Manicure Caballero</h3>
+            <p>Cuidado masculino profesional: limpieza profunda, pulido natural y manos impecables. Porque la elegancia también es para ellos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== ESTERILIZACIÓN E HIGIENE ========== -->
+    <section class="sterilization section section--alt" id="esterilizacion">
+      <div class="container">
+        <div class="sterilization__grid">
+          <div class="sterilization__gallery reveal">
+            <figure class="sterilization__photo sterilization__photo--main">
+              <img
+                src="imagenes/Captura%20de%20pantalla%202026-06-23%20183914.png"
+                alt="Limpieza y desinfección profesional de herramientas de manicure con guantes de protección"
+                loading="lazy"
+              >
+            </figure>
+            <figure class="sterilization__photo sterilization__photo--secondary">
+              <img
+                src="imagenes/Captura%20de%20pantalla%202026-06-23%20183937.png"
+                alt="Proceso de esterilización de cortaúñas, limas y brocas de manicure"
+                loading="lazy"
+              >
+            </figure>
+            <div class="sterilization__badge">
+              <span>✦</span>
+              <p>Protocolo de bioseguridad</p>
+            </div>
+          </div>
+
+          <div class="sterilization__content reveal reveal--delay">
+            <span class="section__tag">Tu seguridad primero</span>
+            <h2 class="section__title">Esterilización y cuidado de herramientas</h2>
+            <p class="sterilization__lead">
+              La belleza empieza con confianza. Por eso cada herramienta pasa por un
+              riguroso proceso de limpieza y desinfección antes de llegar a tu hogar.
+            </p>
+            <p class="sterilization__text">
+              La esterilización no es un detalle: es la base de un servicio profesional y responsable.
+              Protege tu salud, previene infecciones y garantiza que cada cita sea segura,
+              limpia y digna de la confianza que depositas en mí.
+            </p>
+            <ul class="sterilization__list">
+              <li>
+                <span class="sterilization__icon">✓</span>
+                <div>
+                  <strong>Limpieza profunda</strong>
+                  <span>Cada herramienta se lava y desinfecta antes de cada servicio</span>
+                </div>
+              </li>
+              <li>
+                <span class="sterilization__icon">✓</span>
+                <div>
+                  <strong>Desinfección profesional</strong>
+                  <span>Cortaúñas, limas, brocas y accesorios metálicos siempre higienizados</span>
+                </div>
+              </li>
+              <li>
+                <span class="sterilization__icon">✓</span>
+                <div>
+                  <strong>Protección personal</strong>
+                  <span>Uso de guantes y prácticas de bioseguridad en cada visita</span>
+                </div>
+              </li>
+              <li>
+                <span class="sterilization__icon">✓</span>
+                <div>
+                  <strong>Compromiso contigo</strong>
+                  <span>Materiales de un solo uso cuando corresponde, para máxima higiene</span>
+                </div>
+              </li>
+            </ul>
+            <p class="sterilization__note">
+              Llevo a domicilio no solo diseño y elegancia, sino también la tranquilidad
+              de saber que tu cuidado está en manos profesionales y responsables.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== GALERÍA ========== -->
+    <section class="gallery section section--alt" id="galeria">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Portafolio</span>
+          <h2 class="section__title">Galería de trabajos</h2>
+          <p class="section__desc">Cada diseño es una obra de arte pensada para realzar tu estilo y personalidad.</p>
+        </div>
+        <div class="gallery__grid">
+          <article class="gallery__item reveal">
+            <img
+              src="imagenes/WhatsApp%20Image%202026-06-23%20at%206.11.09%20PM.jpeg"
+              alt="Manicure francesa con flores rosadas y brillos sobre fondo elegante"
+              loading="lazy"
+            >
+            <div class="gallery__overlay">
+              <h3>Francesa floral</h3>
+              <p>Flores · Detalles dorados</p>
+            </div>
+          </article>
+          <article class="gallery__item reveal reveal--delay">
+            <img
+              src="imagenes/WhatsApp%20Image%202026-05-27%20at%2011.42.43%20PM.jpeg"
+              alt="Nail art con flores rosadas, glitter dorado y diseños delicados"
+              loading="lazy"
+            >
+            <div class="gallery__overlay">
+              <h3>Arte en uñas</h3>
+              <p>Flores · Glitter dorado</p>
+            </div>
+          </article>
+          <article class="gallery__item reveal reveal--delay-2">
+            <img
+              src="imagenes/WhatsApp%20Image%202026-05-27%20at%2011.51.50%20PM.jpeg"
+              alt="Manicure elegante con diseño ojo turco y mármol en uñas almendradas"
+              loading="lazy"
+            >
+            <div class="gallery__overlay">
+              <h3>Diseño artístico</h3>
+              <p>Semipermanente · Detalles en oro</p>
+            </div>
+          </article>
+          <article class="gallery__item reveal reveal--delay-3">
+            <img
+              src="imagenes/WhatsApp%20Image%202026-05-27%20at%2011.48.00%20PM.jpeg"
+              alt="Manicure colorida con flores, estrellas y diseños creativos"
+              loading="lazy"
+            >
+            <div class="gallery__overlay">
+              <h3>Diseños creativos</h3>
+              <p>Nail art · Tendencias</p>
+            </div>
+          </article>
+          <article class="gallery__item reveal reveal--delay">
+            <img
+              src="imagenes/WhatsApp%20Image%202026-05-27%20at%2011.51.46%20PM.jpeg"
+              alt="Manicure con cuadros azules y flores delicadas"
+              loading="lazy"
+            >
+            <div class="gallery__overlay">
+              <h3>Estilo delicado</h3>
+              <p>Vichy · Flores</p>
+            </div>
+          </article>
+          <article class="gallery__item reveal reveal--delay-2">
+            <img
+              src="imagenes/WhatsApp%20Image%202026-05-27%20at%2011.45.30%20PM.jpeg"
+              alt="Manicure nude con calaveras perlado y fondo natural"
+              loading="lazy"
+            >
+            <div class="gallery__overlay">
+              <h3>Elegancia nude</h3>
+              <p>Detalles perlados</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MANICURE CABALLERO ========== -->
+    <section class="men-service section" id="caballero">
+      <div class="container">
+        <div class="men-service__grid">
+          <div class="men-service__content reveal">
+            <span class="section__tag">Servicio para ellos</span>
+            <h2 class="section__title">Manicure para Caballero</h2>
+            <p class="men-service__lead">
+              Porque el cuidado personal no tiene género.
+              Manos cuidadas son sinónimo de elegancia, presencia y profesionalismo.
+            </p>
+            <p class="men-service__text">
+              Diseñé un servicio exclusivo para hombres que entienden que verse bien
+              está en los detalles. Una experiencia discreta, rápida y profesional,
+              pensada para que tus manos transmitan confianza en cada saludo,
+              reunión o evento importante.
+            </p>
+            <ul class="men-service__features">
+              <li>
+                <span class="men-service__check">✓</span>
+                <div>
+                  <strong>Limpieza profunda</strong>
+                  <span>Cutículas, exfoliación e hidratación</span>
+                </div>
+              </li>
+              <li>
+                <span class="men-service__check">✓</span>
+                <div>
+                  <strong>Pulido natural</strong>
+                  <span>Brillo elegante sin esmalte visible</span>
+                </div>
+              </li>
+              <li>
+                <span class="men-service__check">✓</span>
+                <div>
+                  <strong>Pedicure caballero</strong>
+                  <span>Cuidado completo de pies y uñas</span>
+                </div>
+              </li>
+              <li>
+                <span class="men-service__check">✓</span>
+                <div>
+                  <strong>100% a domicilio</strong>
+                  <span>En la privacidad de tu hogar u oficina</span>
+                </div>
+              </li>
+            </ul>
+            <a href="https://wa.me/573143890546?text=Hola%2C%20quiero%20agendar%20una%20cita%20de%20manicure%20para%20caballero" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+              Reservar mi cita
+            </a>
+          </div>
+          <div class="men-service__gallery">
+            <div class="men-service__photo men-service__photo--1 reveal">
+              <img
+                src="imagenes/caballero-1.jpg"
+                alt="Cuidado masculino y rutina de uñas y manos para hombres"
+                loading="lazy"
+              >
+            </div>
+            <div class="men-service__photo men-service__photo--2 reveal reveal--delay">
+              <img
+                src="imagenes/caballero-2.jpg"
+                alt="Manos masculinas con manicure natural y uñas cuidadas"
+                loading="lazy"
+              >
+            </div>
+            <div class="men-service__photo men-service__photo--3 reveal reveal--delay-2">
+              <img
+                src="imagenes/caballero-3.jpg"
+                alt="Pedicure para caballero con esmalte oscuro elegante"
+                loading="lazy"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TESTIMONIOS ========== -->
+    <section class="testimonials section section--alt" id="testimonios">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Clientas felices</span>
+          <h2 class="section__title">Testimonios</h2>
+          <p class="section__desc">Lo que dicen quienes ya disfrutaron del servicio a domicilio.</p>
+        </div>
+        <div class="testimonials__grid">
+          <blockquote class="testimonial-card reveal">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">
+              "Increíble servicio. Llegó puntual, muy profesional y mis uñas quedaron hermosas.
+              Me encanta no tener que salir de casa para lucir impecable."
+            </p>
+            <footer class="testimonial-card__author">
+              <span class="testimonial-card__name">María Fernanda</span>
+              <span class="testimonial-card__location">Chapinero, Bogotá</span>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial-card reveal reveal--delay">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">
+              "El diseño que me hizo superó mis expectativas. Detallista, limpia y con productos
+              de muy buena calidad. Ya es mi manicurista de confianza."
+            </p>
+            <footer class="testimonial-card__author">
+              <span class="testimonial-card__name">Laura Andrea</span>
+              <span class="testimonial-card__location">Usaquén, Bogotá</span>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial-card reveal reveal--delay-2">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">
+              "Agendé para una reunión importante y quedé encantada. Trato cálido, ambiente
+              relajado en mi sala y un semipermanente que duró semanas perfecto."
+            </p>
+            <footer class="testimonial-card__author">
+              <span class="testimonial-card__name">Carolina Ruiz</span>
+              <span class="testimonial-card__location">Suba, Bogotá</span>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial-card reveal reveal--delay-3">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">
+              "Como hombre nunca había probado un manicure profesional. Excelente servicio,
+              muy discreto y mis manos quedaron impecables. Repetiré sin duda."
+            </p>
+            <footer class="testimonial-card__author">
+              <span class="testimonial-card__name">Andrés Felipe</span>
+              <span class="testimonial-card__location">Cedritos, Bogotá</span>
+            </footer>
+          </blockquote>
+        </div>
+
+        <!-- Reseñas reales de clientas (visibles en todos los dispositivos) -->
+        <div class="reviews__status" id="reviewsStatus" aria-live="polite"></div>
+        <div class="reviews__user-grid" id="userReviewsGrid"></div>
+
+        <!-- Formulario para dejar reseña -->
+        <div class="review-form-wrapper reveal" id="reviewFormWrapper">
+          <div class="review-form-card">
+            <div class="review-form-header">
+              <span class="section__tag">Tu opinión cuenta</span>
+              <h3 class="review-form-title">Deja tu reseña</h3>
+              <p class="review-form-desc">
+                Tu opinión se publicará en la página y la podrán ver todas las visitantes
+                desde celular o computador. También puedes subir una foto de tu manicure.
+              </p>
+            </div>
+            <form class="review-form" id="reviewForm" novalidate>
+              <div class="review-form__row">
+                <div class="review-form__field">
+                  <label for="reviewName">Tu nombre *</label>
+                  <input
+                    type="text"
+                    id="reviewName"
+                    name="name"
+                    placeholder="Ej. María Camila"
+                    maxlength="40"
+                    required
+                  >
+                </div>
+                <div class="review-form__field">
+                  <label for="reviewLocation">Tu zona en Bogotá</label>
+                  <input
+                    type="text"
+                    id="reviewLocation"
+                    name="location"
+                    placeholder="Ej. Chapinero (opcional)"
+                    maxlength="40"
+                  >
+                </div>
+              </div>
+
+              <div class="review-form__field">
+                <label>Tu calificación *</label>
+                <div class="rating-stars" id="ratingStars" role="radiogroup" aria-label="Calificación">
+                  <button type="button" class="rating-star" data-value="1" aria-label="1 estrella">★</button>
+                  <button type="button" class="rating-star" data-value="2" aria-label="2 estrellas">★</button>
+                  <button type="button" class="rating-star" data-value="3" aria-label="3 estrellas">★</button>
+                  <button type="button" class="rating-star" data-value="4" aria-label="4 estrellas">★</button>
+                  <button type="button" class="rating-star" data-value="5" aria-label="5 estrellas">★</button>
+                  <span class="rating-stars__label" id="ratingLabel">Selecciona</span>
+                </div>
+              </div>
+
+              <div class="review-form__field">
+                <label for="reviewText">Tu reseña *</label>
+                <textarea
+                  id="reviewText"
+                  name="text"
+                  rows="4"
+                  maxlength="400"
+                  placeholder="Cuéntanos cómo fue tu experiencia..."
+                  required
+                ></textarea>
+                <span class="review-form__counter" id="reviewCounter">0 / 400</span>
+              </div>
+
+              <div class="review-form__field">
+                <label for="reviewImage">Foto de tu servicio (opcional)</label>
+                <input
+                  type="file"
+                  id="reviewImage"
+                  name="image"
+                  accept="image/jpeg,image/png,image/webp,image/jpg"
+                >
+                <span class="review-form__hint">JPG o PNG · Máximo 5 MB</span>
+                <div class="review-form__image-preview" id="reviewImagePreview" hidden>
+                  <img id="reviewImagePreviewImg" src="" alt="Vista previa de tu foto">
+                  <button type="button" class="review-form__image-remove" id="reviewImageRemove">
+                    Quitar foto
+                  </button>
+                </div>
+              </div>
+
+              <div class="review-form__actions">
+                <button type="submit" class="btn btn--primary" id="reviewSubmitBtn">Publicar reseña</button>
+                <button type="button" class="btn btn--secondary" id="sendWhatsappReview">
+                  Enviar por WhatsApp
+                </button>
+              </div>
+
+              <div class="review-form__message" id="reviewMessage" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CTA CONTACTO ========== -->
+    <section class="cta section" id="contacto">
+      <div class="container cta__inner reveal">
+        <h2 class="cta__title">¿Lista para lucir uñas perfectas?</h2>
+        <p class="cta__text">Agenda tu cita hoy y disfruta de manicure profesional sin salir de casa.</p>
+        <a href="https://wa.me/573143890546?text=Hola%2C%20quiero%20agendar%20una%20cita" class="btn btn--primary btn--large" target="_blank" rel="noopener noreferrer">
+          Agenda tu cita por WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <h3 class="footer__logo">Manicure<span>Bogotá</span></h3>
+        <p class="footer__message">
+          Belleza, cuidado y elegancia en la comodidad de tu hogar.
+          Gracias por confiar en mi trabajo.
+        </p>
+      </div>
+      <div class="footer__contact">
+        <h4>Contacto</h4>
+        <p>
+          <a href="tel:+573143890546">+57 314 389 0546</a>
+        </p>
+        <p>
+          <a href="https://wa.me/573143890546" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </p>
+        <p class="footer__city">📍 Bogotá, Colombia</p>
+      </div>
+      <div class="footer__social">
+        <h4>WhatsApp</h4>
+        <div class="footer__social-links">
+          <a href="https://wa.me/573143890546" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.881 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>&copy; 2026 Manicure a Domicilio Bogotá. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ========== BOTÓN FLOTANTE WHATSAPP ========== -->
+  <a
+    href="https://wa.me/573143890546"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp"
+    id="whatsappFloat"
+  >
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.881 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="whatsapp-float__tooltip">¡Escríbeme!</span>
+  </a>
+
+  <!-- Firebase: reseñas en la nube (visibles para todos) -->
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-storage-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="script.js"></script>
+  <script src="reviews-module.js"></script>
+</body>
+</html>
