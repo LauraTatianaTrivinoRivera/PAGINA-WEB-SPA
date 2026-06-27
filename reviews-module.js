@@ -1,13 +1,14 @@
 /**
- * Módulo de reseñas en la nube (Firebase Firestore + Storage)
+ * Módulo de reseñas en la nube (Firebase Firestore)
  * Las reseñas son visibles desde cualquier celular o computador.
  */
 (function () {
   'use strict';
 
+  // Cambiar a true cuando actives Firebase Storage y el campo de foto en index.html
+  const REVIEWS_ALLOW_PHOTOS = false;
+
   const WHATSAPP_NUMBER = '573143890546';
-  const MAX_IMAGE_SIZE = 5 * 1024 * 1024;
-  const ALLOWED_IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/jpg'];
 
   const reviewForm = document.getElementById('reviewForm');
   const reviewName = document.getElementById('reviewName');
@@ -51,6 +52,9 @@
   }
 
   function isFirebaseConfigured() {
+    if (typeof firebase !== 'undefined' && firebase.apps.length) {
+      return true;
+    }
     const cfg = window.MANICURE_FIREBASE_CONFIG;
     if (!cfg) return false;
     return (
@@ -62,15 +66,26 @@
   }
 
   function initFirebase() {
-    if (!isFirebaseConfigured() || typeof firebase === 'undefined') {
+    if (typeof firebase === 'undefined') {
       return false;
     }
     try {
-      if (!firebase.apps.length) {
-        firebase.initializeApp(window.MANICURE_FIREBASE_CONFIG);
+      if (firebase.apps.length) {
+        db = firebase.firestore();
+        if (REVIEWS_ALLOW_PHOTOS && typeof firebase.storage === 'function') {
+          storage = firebase.storage();
+        }
+        firebaseReady = true;
+        return true;
       }
+      if (!window.MANICURE_FIREBASE_CONFIG) {
+        return false;
+      }
+      firebase.initializeApp(window.MANICURE_FIREBASE_CONFIG);
       db = firebase.firestore();
-      storage = firebase.storage();
+      if (REVIEWS_ALLOW_PHOTOS && typeof firebase.storage === 'function') {
+        storage = firebase.storage();
+      }
       firebaseReady = true;
       return true;
     } catch (err) {
@@ -91,7 +106,7 @@
     const location = review.location
       ? '<span class="testimonial-card__location">' + escapeHtml(review.location) + ', Bogotá</span>'
       : '';
-    const imageBlock = review.imageUrl
+    const imageBlock = REVIEWS_ALLOW_PHOTOS && review.imageUrl
       ? '<figure class="testimonial-card__photo"><img src="' + escapeHtml(review.imageUrl) + '" alt="Foto del servicio de ' + escapeHtml(review.name) + '" loading="lazy"></figure>'
       : '';
 
@@ -197,7 +212,9 @@
   }
 
   function validateImageFile(file) {
-    if (!file) return { ok: true };
+    if (!REVIEWS_ALLOW_PHOTOS || !file) return { ok: true };
+    const MAX_IMAGE_SIZE = 5 * 1024 * 1024;
+    const ALLOWED_IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/jpg'];
     if (!ALLOWED_IMAGE_TYPES.includes(file.type)) {
       return { ok: false, msg: 'Solo se permiten imágenes JPG o PNG.' };
     }
@@ -217,7 +234,9 @@
     const name = reviewName ? reviewName.value.trim() : '';
     const location = reviewLocation ? reviewLocation.value.trim() : '';
     const text = reviewText ? reviewText.value.trim() : '';
-    const imageFile = reviewImage && reviewImage.files[0] ? reviewImage.files[0] : null;
+    const imageFile = REVIEWS_ALLOW_PHOTOS && reviewImage && reviewImage.files[0]
+      ? reviewImage.files[0]
+      : null;
 
     if (reviewName) reviewName.classList.toggle('error', !name);
     if (reviewText) reviewText.classList.toggle('error', !text);
@@ -249,6 +268,9 @@
   }
 
   function uploadReviewImage(file) {
+    if (!REVIEWS_ALLOW_PHOTOS || !storage) {
+      return Promise.reject(new Error('Fotos desactivadas'));
+    }
     const ext = file.name.split('.').pop().toLowerCase().replace(/[^a-z0-9]/g, '') || 'jpg';
     const fileName = Date.now() + '_' + Math.random().toString(36).slice(2, 9) + '.' + ext;
     const ref = storage.ref('review-images/' + fileName);
@@ -268,7 +290,7 @@
 
     setSubmitting(true);
 
-    const savePromise = data.imageFile
+    const savePromise = REVIEWS_ALLOW_PHOTOS && data.imageFile
       ? uploadReviewImage(data.imageFile).then(function (imageUrl) {
           return db.collection('reviews').add({
             name: data.name,
@@ -331,7 +353,7 @@
     }
   });
 
-  if (reviewImage) {
+  if (REVIEWS_ALLOW_PHOTOS && reviewImage) {
     reviewImage.addEventListener('change', function () {
       const file = reviewImage.files[0];
       if (!file) {
@@ -353,7 +375,7 @@
     });
   }
 
-  if (reviewImageRemove) {
+  if (REVIEWS_ALLOW_PHOTOS && reviewImageRemove) {
     reviewImageRemove.addEventListener('click', clearImagePreview);
   }
 

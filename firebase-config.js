@@ -11,6 +11,5 @@ const firebaseConfig = {
 // Inicializar Firebase en la página web
 firebase.initializeApp(firebaseConfig);
 
-// Inicializar los servicios para que funcionen las reseñas
+// Inicializar Firestore para las reseñas (Storage desactivado temporalmente)
 const db = firebase.firestore();
-const storage = firebase.storage();

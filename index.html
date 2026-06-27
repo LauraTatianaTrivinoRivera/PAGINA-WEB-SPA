@@ -480,7 +480,7 @@
               <h3 class="review-form-title">Deja tu reseña</h3>
               <p class="review-form-desc">
                 Tu opinión se publicará en la página y la podrán ver todas las visitantes
-                desde celular o computador. También puedes subir una foto de tu manicure.
+                desde celular o computador.
               </p>
             </div>
             <form class="review-form" id="reviewForm" novalidate>
@@ -533,6 +533,7 @@
                 <span class="review-form__counter" id="reviewCounter">0 / 400</span>
               </div>
 
+              <!-- Foto desactivada temporalmente (requiere Firebase Storage)
               <div class="review-form__field">
                 <label for="reviewImage">Foto de tu servicio (opcional)</label>
                 <input
@@ -549,6 +550,7 @@
                   </button>
                 </div>
               </div>
+              -->
 
               <div class="review-form__actions">
                 <button type="submit" class="btn btn--primary" id="reviewSubmitBtn">Publicar reseña</button>
@@ -628,7 +630,9 @@
   <!-- Firebase: reseñas en la nube (visibles para todos) -->
   <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+  <!-- Storage desactivado temporalmente
   <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-storage-compat.js"></script>
+  -->
   <script src="firebase-config.js"></script>
   <script src="script.js"></script>
   <script src="reviews-module.js"></script>
