@@ -115,7 +115,7 @@
 
   // ---------- Cerrar menú al redimensionar ventana ----------
   window.addEventListener('resize', function () {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 1100) {
       navToggle.classList.remove('active');
       navMenu.classList.remove('open');
       document.body.style.overflow = '';
