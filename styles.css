@@ -173,7 +173,8 @@ ul {
 
 /* En secciones sin header (con title a la izquierda) ocultar la línea centrada */
 .about__content .section__title::after,
-.men-service__content .section__title::after {
+.men-service__content .section__title::after,
+.threading__content .section__title::after {
   margin-left: 0;
   margin-right: 0;
 }
@@ -1215,6 +1216,176 @@ ul {
   grid-row: 2;
 }
 
+/* ---------- Depilación con hilo ---------- */
+.threading {
+  background:
+    linear-gradient(165deg, var(--color-rose-light) 0%, var(--color-beige) 45%, var(--color-white) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.threading::before {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: var(--color-celadon-soft);
+  opacity: 0.25;
+  filter: blur(30px);
+}
+
+.threading__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.threading__image {
+  position: relative;
+}
+
+.threading__image-wrapper {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
+  border: 3px solid var(--color-gold-light);
+  background: var(--color-image-bg);
+  aspect-ratio: 4 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.threading__image-wrapper:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-hover);
+}
+
+.threading__image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  transition: transform 0.6s ease;
+}
+
+.threading__image-wrapper:hover img {
+  transform: scale(1.03);
+}
+
+.threading__accent {
+  position: absolute;
+  bottom: -1rem;
+  right: -1rem;
+  width: 120px;
+  height: 120px;
+  border: 3px solid var(--color-gold);
+  border-radius: var(--radius-md);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.threading__badge {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-gold-soft);
+}
+
+.threading__badge span {
+  color: var(--color-gold);
+  font-size: 0.9rem;
+}
+
+.threading__badge p {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+  margin: 0;
+}
+
+.threading__lead {
+  font-family: var(--font-script);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--color-gold-dark);
+  line-height: 1.35;
+  margin: 1rem 0 1.25rem;
+}
+
+.threading__text {
+  font-weight: 300;
+  margin-bottom: 1.75rem;
+  line-height: 1.7;
+}
+
+.threading__benefits {
+  margin-bottom: 2rem;
+}
+
+.threading__benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px dashed rgba(212, 101, 92, 0.35);
+}
+
+.threading__benefits li:last-child {
+  border-bottom: none;
+}
+
+.threading__benefits div {
+  display: flex;
+  flex-direction: column;
+}
+
+.threading__benefits strong {
+  color: var(--color-text-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.threading__benefits span:not(.threading__icon) {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--color-text);
+  opacity: 0.85;
+}
+
+.threading__icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-gold);
+  color: var(--color-white);
+  border-radius: 50%;
+  font-size: 0.75rem;
+  margin-top: 2px;
+  box-shadow: var(--shadow-gold);
+}
+
 /* ---------- Testimonios ---------- */
 .testimonials__grid {
   display: grid;
@@ -1976,6 +2147,17 @@ ul {
     gap: 2.5rem;
   }
 
+  .threading__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .threading__image {
+    max-width: 420px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
   .men-service__gallery {
     max-width: 500px;
     margin: 0 auto;
@@ -2032,6 +2214,10 @@ ul {
   }
 
   .men-service__lead {
+    font-size: 1.2rem;
+  }
+
+  .threading__lead {
     font-size: 1.2rem;
   }
 
